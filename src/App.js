@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+/* Create a component in components folder first */
+/* Add information into the component */
+/* In App.js import the component */
+
+import { Header } from './components/Header'; /* This is to create the header Expense Tracker*/
+import { Balance } from './components/Balance'; /* This is to create the Balance Portion*/
+import { IncomeExpenses } from './components/IncomeExpenses'; /* This is to create the Income Expense Portion*/
+import { TransactionList } from './components/TransactionList'; /* This is to create the History portion*/
+import { AddTransaction } from './components/AddTransaction'; /* This is to create the Add new transaction portion*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div className="container">
+        <Balance />
+        <IncomeExpenses />
+        <TransactionList />
+        <AddTransaction />
+      </div>
     </div>
   );
 }
